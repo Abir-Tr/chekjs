@@ -58,7 +58,7 @@ function Capitalize(sentence){
    }
  console.log(SumArray([4,6,4]));
  
- function FilterArray(array){
+ function FilterNbrPair(array){
    let result=[];
    for (let i=0 ; i<array.length; i++){
      if(array[i]%2==0){
@@ -67,7 +67,7 @@ function Capitalize(sentence){
    }
    return result; 
  }
- console.log(FilterArray([2,7,8,10]));
+ console.log(FilterNbrPair([2,7,8,10]));
  
  
  function Factorial(nbr){
@@ -79,18 +79,23 @@ function Capitalize(sentence){
  }
  console.log(Factorial(6));
  
-  function PrimeNumber(num){
-   
-   for (i=2; i<= num;i++){
-   if ( num % i === 0){
- return "is not a prime number" ;
-   }
-   
-   }
-   return "is a prime number" ;
- }
+
+ function PrimeNumber(num) {
+  if (num <= 1) {
+    return "is not a prime number"; 
+  }
+  for (let i = 2; i < num; i++) { 
+    if (num % i === 0) {
+      return "is not a prime number";
+    }
+  }
+  return "is a prime number";
   
-  console.log(PrimeNumber(15));
+ }
+console.log(PrimeNumber(11)); 
+console.log(PrimeNumber(15)); 
+
+
  
   function FibonacciSequence(k){
    let fib=[0,1]; 
